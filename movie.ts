@@ -23,4 +23,7 @@ export class Movie{
     public printDatos(){
         return `${this.title} - ${this.releaseYear} - ${this.nationality} - ${this.genre}`
     }
+    public toJson():any{
+        return  {title: this.title, year: this.releaseYear, genre: this.genre};
+    }
 }

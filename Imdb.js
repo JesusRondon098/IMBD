@@ -5,6 +5,9 @@ var Imdb = /** @class */ (function () {
     function Imdb(peliculas) {
         this.peliculas = peliculas;
     }
+    Imdb.prototype.toJson = function () {
+        return { peliculas: this.peliculas };
+    };
     return Imdb;
 }());
 exports.Imdb = Imdb;

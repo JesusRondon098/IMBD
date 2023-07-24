@@ -5,4 +5,7 @@ export class Imdb{
     constructor(peliculas : Movie[]){
      this.peliculas = peliculas;
     }
+    public toJson(){
+        return {peliculas : this.peliculas}
+    }
 }

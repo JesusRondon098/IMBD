@@ -11,6 +11,9 @@ var Movie = /** @class */ (function () {
     Movie.prototype.printDatos = function () {
         return "".concat(this.title, " - ").concat(this.releaseYear, " - ").concat(this.nationality, " - ").concat(this.genre);
     };
+    Movie.prototype.toJson = function () {
+        return { title: this.title, year: this.releaseYear, genre: this.genre };
+    };
     return Movie;
 }());
 exports.Movie = Movie;
