@@ -17,7 +17,7 @@ export class Movie{
     constructor(title:string, releaseYear:number, nacionality:string, genre:string){
         this.title = title;
         this.releaseYear = releaseYear;
-        this.nationality = nacionality;
+        this.nationality = nacionality; 
         this.genre = genre;
     }
     public printDatos(){

@@ -2,10 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Imdb_1 = require("./Imdb");
 var movie_1 = require("./movie");
+var fs = require("fs");
 var pelicula = new movie_1.Movie("El patriota", 2005, "Estados Unidos", "Belica");
 var pelicula1 = new movie_1.Movie("Doraemon", 1990, "Japonesa", "Animada");
 var pelicula2 = new movie_1.Movie("Star War", 1980, "Estados Unidos", "Ciencia Ficcion");
 var peliculas = [pelicula, pelicula1, pelicula2];
 var imdb = new Imdb_1.Imdb(peliculas);
-var string = JSON.stringify(imdb);
-console.log(string);
+var imdbString = JSON.stringify(imdb);
+fs.writeFileSync("IMBD.json", imdbString);
+console.log(imdbString);
